@@ -18,7 +18,7 @@ const projects = [
     desc: "Full-stack system for generating and validating QR-based event passes with real-time scanning and verification.",
     tech: ["React", "Node.js", "MySQL"],
     category: "Android",
-    github: "https://github.com/JEEVAN27705/qr-refreshment-system",
+    github: "picrefreshmentpass.netlify.app",
     demo: "#",
   },
   {
@@ -29,9 +29,17 @@ const projects = [
   github: "https://github.com/JEEVAN27705/PBL_2025", 
   demo: "#",
 },
+{
+    title: "Virtual Fort Tour Website",
+  desc: "Interactive web-based experience showcasing Kolaba Fort with visual exploration, historical insights, and a user-friendly interface for virtual navigation.",
+  tech: ["React", "JavaScript", "CSS", "Three.js"],
+    category: "Web",
+    github: "https://github.com/JEEVAN27705/virtual-fort-tour",
+    demo: "virtualswaraj.netlify.app",
+  },
 ];
 
-const filters = ["All", "AI", "Android", "Game"] as const;
+const filters = ["All", "AI", "Android", "Web"] as const;
 
 export const Projects = () => {
   const [filter, setFilter] = useState<(typeof filters)[number]>("All");
