@@ -6,48 +6,32 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
-    title: "AI in Online Abuse Prevention",
-    desc: "Real-time NLP system that detects and mitigates abusive content across digital platforms using transformer models.",
-    tech: ["Python", "PyTorch", "FastAPI", "React"],
-    category: "AI",
-    github: "#",
-    demo: "#",
-  },
-  {
     title: "Hate Speech Detection System",
-    desc: "Multi-class classification pipeline trained on social media data to identify hate speech with high precision.",
-    tech: ["Python", "Scikit-learn", "NLTK", "Flask"],
+    desc: "Machine learning model for multi-class classification of hate speech with high accuracy on social media datasets.",
+    tech: ["Python", "Scikit-learn", "NLTK"],
     category: "AI",
-    github: "#",
+    github: "",
     demo: "#",
   },
   {
-    title: "Virtual Fort Tour",
-    desc: "Immersive 3D experience built in Unity letting users explore historical forts with interactive storytelling.",
-    tech: ["Unity", "C#", "Blender"],
-    category: "Game",
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Timetable Scheduling App",
-    desc: "Smart scheduling tool that auto-generates conflict-free timetables for institutions using constraint solving.",
+    title: "QR Code Event Entry System",
+    desc: "Full-stack system for generating and validating QR-based event passes with real-time scanning and verification.",
     tech: ["React", "Node.js", "MySQL"],
-    category: "Web",
-    github: "#",
+    category: "Android",
+    github: "https://github.com/JEEVAN27705/qr-refreshment-system",
     demo: "#",
   },
   {
-    title: "AI Interview Simulation System",
-    desc: "Mock interview platform powered by LLMs that evaluates answers, posture, and provides instant feedback.",
-    tech: ["Python", "OpenAI", "React", "WebRTC"],
-    category: "AI",
-    github: "#",
-    demo: "#",
-  },
+  title: "AI Chatbot Assistant",
+  desc: "Intelligent chatbot that understands user queries and generates contextual responses using NLP and LLM integration, with a clean conversational UI.",
+  tech: ["Python", "FastAPI", "React", "NLP", "OpenAI API"],
+  category: "AI",
+  github: "https://github.com/JEEVAN27705/PBL_2025", 
+  demo: "#",
+},
 ];
 
-const filters = ["All", "AI", "Web", "Game"] as const;
+const filters = ["All", "AI", "Android", "Game"] as const;
 
 export const Projects = () => {
   const [filter, setFilter] = useState<(typeof filters)[number]>("All");
