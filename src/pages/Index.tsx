@@ -13,7 +13,7 @@ import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Your Name — Computer Engineer & Developer";
+    document.title = "Jeevan Patil -- Dev & Tester";
     const desc = document.querySelector('meta[name="description"]');
     const content =
       "Portfolio of a Computer Engineering student & developer specializing in AI, web development, and immersive experiences.";
