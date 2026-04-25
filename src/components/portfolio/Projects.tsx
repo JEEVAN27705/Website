@@ -5,21 +5,21 @@ import { Section } from "./Section";
 import { Button } from "@/components/ui/button";
 
 const projects = [
-  {
-    title: "Hate Speech Detection System",
-    desc: "Machine learning model for multi-class classification of hate speech with high accuracy on social media datasets.",
-    tech: ["Python", "Scikit-learn", "NLTK"],
-    category: "AI",
-    github: "",
-    demo: "#",
-  },
+ {
+  title: "Hate Speech Detection System",
+  desc: "Machine learning model for multi-class classification of hate speech with high accuracy on social media datasets.",
+  tech: ["Python", "Scikit-learn", "NLTK"],
+  category: "AI",
+  github: "/not-found",
+  demo: "/in-development",
+},
   {
     title: "QR Code Event Entry System",
     desc: "Full-stack system for generating and validating QR-based event passes with real-time scanning and verification.",
     tech: ["React", "Node.js", "MySQL"],
     category: "Android",
-    github: "picrefreshmentpass.netlify.app",
-    demo: "#",
+    github: "https://github.com/JEEVAN27705/qr-refreshment-system",
+    demo: "https://picrefreshmentpass.netlify.app/login",
   },
   {
   title: "AI Chatbot Assistant",
@@ -27,7 +27,7 @@ const projects = [
   tech: ["Python", "FastAPI", "React", "NLP", "OpenAI API"],
   category: "AI",
   github: "https://github.com/JEEVAN27705/PBL_2025", 
-  demo: "#",
+  demo: "/in-development",
 },
 {
     title: "Virtual Fort Tour Website",
@@ -35,7 +35,7 @@ const projects = [
   tech: ["React", "JavaScript", "CSS", "Three.js"],
     category: "Web",
     github: "https://github.com/JEEVAN27705/virtual-fort-tour",
-    demo: "virtualswaraj.netlify.app",
+    demo: "https://virtualswaraj.netlify.app/",
   },
 ];
 
@@ -94,12 +94,12 @@ export const Projects = () => {
               </div>
               <div className="flex gap-2">
                 <Button asChild size="sm" variant="outline" className="rounded-full flex-1">
-                  <a href={p.github} target="_blank" rel="noreferrer">
+                  <a href={p.github} rel="noreferrer">
                     <Github className="mr-2 h-4 w-4" /> Code
                   </a>
                 </Button>
                 <Button asChild size="sm" className="rounded-full flex-1 bg-gradient-to-r from-primary to-accent border-0">
-                  <a href={p.demo} target="_blank" rel="noreferrer">
+                  <a href={p.demo}  rel="noreferrer">
                     <ExternalLink className="mr-2 h-4 w-4" /> Demo
                   </a>
                 </Button>

@@ -114,7 +114,7 @@ export const Hero = () => {
               className="rounded-full text-base px-7 h-12"
             >
               <a href="/Resume–JeevanPatil.pdf" target="_blank">
-                <Download className="mr-2 h-4 w-4" /> Resume
+                <Download className="mr-2 h-4 w-4"/> Resume
               </a>
             </Button>
           </motion.div>

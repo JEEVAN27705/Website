@@ -26,12 +26,12 @@ export const Resume = () => (
           <div className="flex flex-wrap justify-center gap-3">
             <Button asChild size="lg" className="rounded-full px-7 h-12 bg-gradient-to-r from-primary to-accent border-0 glow-shadow">
               <a href="/Resume-JeevanPatil.pdf" download="Resume-JeevanPatil.pdf">
-                <Download className="mr-2 h-4 w-4" /> Download Resume
+                <Download className="mr-2 h-4 w-4"/> Download Resume
               </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="rounded-full px-7 h-12 glass">
               <a href="/Resume–JeevanPatil.pdf" target="_blank">
-                <Download className="mr-2 h-4 w-4" /> Resume
+                <Download className="mr-2 h-4 w-4"/> Resume
               </a>
             </Button>
           </div>
