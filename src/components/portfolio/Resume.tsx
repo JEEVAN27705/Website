@@ -31,7 +31,7 @@ export const Resume = () => (
             </Button>
             <Button asChild size="lg" variant="outline" className="rounded-full px-7 h-12 glass">
               <a href="/Resume–JeevanPatil.pdf" target="_blank">
-                <Download className="mr-2 h-4 w-4"/> Resume
+                <Eye className="mr-2 h-4 w-4"/> View Online
               </a>
             </Button>
           </div>
