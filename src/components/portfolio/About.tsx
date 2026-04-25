@@ -84,15 +84,17 @@ export const About = () => (
   I am proficient in Python, Java, SQL, and modern web technologies, and have working
   knowledge of automation and API testing using Selenium WebDriver and Postman. I also have
   an industry expirence in manual testing.
-</p>
+  </p>
 
-<p className="text-base md:text-lg leading-relaxed text-muted-foreground">
+<p className="text-base md:text-lg leading-relaxed text-foreground/90 mb-4">
+
   I’m comfortable collaborating with cross-functional teams using tools like Jira and Git,
   and I enjoy contributing across the software lifecycle—from development to validation—
   to deliver reliable and scalable solutions. My goal is to keep growing as a developer
   who bridges intelligent backends with beautiful interfaces and builds meaningful,
   human-centered technology.
 </p>
+
       </motion.div>
 
       <div className="grid sm:grid-cols-2 gap-4">

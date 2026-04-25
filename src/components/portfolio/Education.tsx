@@ -18,7 +18,7 @@ const items = [
   {
     degree: "Secondary School Certificate (SSC)",
     school: "St Jude High School",
-    year: "2008 — 2017",
+    year: "2008 — 2021",
     detail: "Secured 76%. Built a strong academic foundation with early exposure to core subjects.",
   },
 ];

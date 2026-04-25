@@ -16,9 +16,9 @@ const schema = z.object({
 });
 
 const socials = [
-  { icon: Github, label: "GitHub", href: "https://github.com" },
+  { icon: Github, label: "GitHub", href: "https://github.com/JEEVAN27705" },
   { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-  { icon: Mail, label: "Email", href: "mailto:hello@example.com" },
+  { icon: Mail, label: "Email", href: "mailto:patiljeevan800@gmail.com" },
 ];
 
 export const Contact = () => {
@@ -41,7 +41,7 @@ export const Contact = () => {
   };
 
   return (
-    <Section id="contact" eyebrow="get in touch" title="Let's build something" subtitle="Have an idea, opportunity, or just want to say hi? My inbox is open.">
+    <Section id="contact" eyebrow="Contact Me " title="Let's build something" subtitle="Have an idea, opportunity, or just want to say hi? My inbox is open.">
       <div className="grid lg:grid-cols-5 gap-8">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -56,7 +56,7 @@ export const Contact = () => {
               <div className="flex items-center gap-3 text-sm">
                 <Mail className="h-4 w-4 text-primary" />
                 <a href="mailto:hello@example.com" className="hover:text-primary transition-colors">
-                  hello@example.com
+                  patiljeevan800@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
@@ -102,7 +102,7 @@ export const Contact = () => {
               id="name"
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
-              placeholder="Jane Doe"
+              placeholder="Jeevan Patil"
               maxLength={100}
               className="mt-2 h-12 rounded-xl bg-background/50"
             />
@@ -114,7 +114,7 @@ export const Contact = () => {
               type="email"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
-              placeholder="jane@example.com"
+              placeholder="patiljeevan800@gmail.com"
               maxLength={255}
               className="mt-2 h-12 rounded-xl bg-background/50"
             />
