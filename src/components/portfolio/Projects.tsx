@@ -12,6 +12,7 @@ const projects = [
   category: "AI",
   github: "/not-found",
   demo: "/in-development",
+  image: "/projects/hate_speech_ai_1777407682517.png",
 },
   {
     title: "QR Code Event Entry System",
@@ -20,6 +21,7 @@ const projects = [
     category: "Android",
     github: "https://github.com/JEEVAN27705/qr-refreshment-system",
     demo: "https://picrefreshmentpass.netlify.app/login",
+    image: "/projects/qr_code_event_1777407710417.png",
   },
   {
   title: "AI Chatbot Assistant",
@@ -28,6 +30,7 @@ const projects = [
   category: "AI",
   github: "https://github.com/JEEVAN27705/PBL_2025", 
   demo: "/in-development",
+  image: "/projects/ai_chatbot_1777408211755.png",
 },
 {
     title: "Virtual Fort Tour Website",
@@ -36,6 +39,7 @@ const projects = [
     category: "Web",
     github: "https://github.com/JEEVAN27705/virtual-fort-tour",
     demo: "https://virtualswaraj.netlify.app/",
+    image: "/projects/virtual_fort_tour_1777408521932.png",
   },
 ];
 
@@ -76,10 +80,14 @@ export const Projects = () => {
               className="glass rounded-3xl p-6 card-shadow flex flex-col group hover:-translate-y-1 transition-transform"
             >
               <div className="aspect-[16/10] rounded-2xl mb-5 mesh-bg relative overflow-hidden flex items-center justify-center">
-                <span className="font-mono text-5xl font-bold gradient-text opacity-60">
-                  {p.title.split(" ").map((w) => w[0]).join("").slice(0, 3)}
-                </span>
-                <span className="absolute top-3 right-3 text-xs font-mono px-2 py-1 rounded-full glass">
+                {p.image ? (
+                  <img src={p.image} alt={p.title} className="w-full h-full object-cover absolute inset-0 z-0" />
+                ) : (
+                  <span className="font-mono text-5xl font-bold gradient-text opacity-60">
+                    {p.title.split(" ").map((w) => w[0]).join("").slice(0, 3)}
+                  </span>
+                )}
+                <span className="absolute top-3 right-3 z-10 text-xs font-mono px-2 py-1 rounded-full glass shadow-sm">
                   {p.category}
                 </span>
               </div>
