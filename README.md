@@ -1,4 +1,4 @@
-# 🌐 Jeevan Patil - Portfolio Website
+# Jeevan Patil - Portfolio Website
 
 Personal portfolio website showcasing my **projects, skills, and experience**  
 📍 *Pune, Maharashtra, India*  
