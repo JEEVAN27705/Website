@@ -37,8 +37,9 @@ export const Contact = () => {
     setLoading(true);
 
     try {
+      // Use the relative path for Netlify functions
       const url = "/.netlify/functions/send-email";
-      console.log(`Fetching from: ${window.location.origin}${url}`);
+      
       const res = await fetch(url, {
         method: "POST",
         headers: {
@@ -48,26 +49,30 @@ export const Contact = () => {
       });
 
       let data;
-      try {
+      const contentType = res.headers.get("content-type");
+      if (contentType && contentType.includes("application/json")) {
         data = await res.json();
-      } catch (e) {
-        console.error("Failed to parse JSON response:", e);
-        toast.error(`Server error: ${res.status} ${res.statusText}`);
-        return;
+      } else {
+        const text = await res.text();
+        console.error("Non-JSON response:", text);
+        throw new Error(`Server returned ${res.status}: ${res.statusText}`);
       }
 
-      if (res.ok) {
+      if (res.ok && data.success) {
         toast.success("Message sent successfully!");
         setForm({ name: "", email: "", message: "" });
       } else {
-        toast.error(data.error || "Failed to send message");
+        const errorMessage = data.error || data.message || "Failed to send message";
+        toast.error(errorMessage);
+        console.error("Submission failed:", data);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("Submission error:", error);
-      toast.error("Something went wrong. Please check your connection.");
+      toast.error(error.message || "Something went wrong. Please check your connection.");
     } finally {
       setLoading(false);
     }
+
   };
 
   return (

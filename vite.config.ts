@@ -11,7 +11,15 @@ export default defineConfig(({ mode }) => ({
     hmr: {
       overlay: false,
     },
+    proxy: {
+      "/.netlify/functions": {
+        target: "http://localhost:8888",
+        changeOrigin: true,
+        secure: false,
+      },
+    },
   },
+
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {
