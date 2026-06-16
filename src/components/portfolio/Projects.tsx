@@ -40,7 +40,7 @@ const projects = [
     github: "https://github.com/JEEVAN27705/virtual-fort-tour",
     demo: "https://virtualswaraj.netlify.app/",
     image: "/projects/virtual_fort_tour_1777408521932.png",
-  },
+  }
 ];
 
 const filters = ["All", "AI", "Android", "Web"] as const;

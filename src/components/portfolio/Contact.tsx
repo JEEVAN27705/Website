@@ -50,15 +50,45 @@ export const Contact = () => {
       return;
     }
 
-    toast.info(
-      "Email service backend is currently under development. Will be available soon!"
-    );
+    setLoading(true);
 
-    setForm({
-      name: "",
-      email: "",
-      message: "",
-    });
+    try {
+      // Use the relative path for Netlify functions
+      const url = "/.netlify/functions/send-email";
+
+      const res = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      let data;
+      const contentType = res.headers.get("content-type");
+      if (contentType && contentType.includes("application/json")) {
+        data = await res.json();
+      } else {
+        const text = await res.text();
+        console.error("Non-JSON response:", text);
+        throw new Error(`Server returned ${res.status}: ${res.statusText}`);
+      }
+
+      if (res.ok && data.success) {
+        toast.success("Message sent successfully!");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        const errorMessage = data.error || data.message || "Failed to send message";
+        toast.error(errorMessage);
+        console.error("Submission failed:", data);
+      }
+    } catch (error: any) {
+      console.error("Submission error:", error);
+      toast.error(error.message || "Something went wrong. Please check your connection.");
+    } finally {
+      setLoading(false);
+    }
+
   };
 
   return (

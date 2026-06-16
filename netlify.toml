@@ -3,6 +3,3 @@
   targetPort = 8080
   publish = "dist"
   framework = "#custom"
-
-[functions]
-  directory = "netlify/functions"
