@@ -206,7 +206,7 @@ export const Contact = () => {
               onChange={(e) =>
                 setForm({ ...form, email: e.target.value })
               }
-              placeholder="your@email.com"
+              placeholder="patiljeevan800@gmail.com"
               maxLength={255}
               className="mt-2 h-12 rounded-xl bg-background/50"
             />
